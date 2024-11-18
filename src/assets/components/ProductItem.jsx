@@ -14,4 +14,4 @@ return (
   }
   
   export default ProductItem;
-  
+  // exhibits the product information

@@ -10,7 +10,7 @@ function App() {
     {id: 3, name: "Coke", price: 3, description: "Diet Coke" },
     ]); 
 
-// to create the prop i used i addprofuctform
+// to create the prop i used in addprofuctform
 const addProduct = (newProduct) => {
  setProducts((prevProducts) => [...prevProducts, newProduct]);
   };

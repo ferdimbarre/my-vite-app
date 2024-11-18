@@ -5,7 +5,7 @@ function idGenerator (){
     let time = Date.now();
     const mathRand= Math.floor(Math.random()* 1000)
     return `${time}${mathRand}`
-}
+} //generates unique id using combination of two methods 
 
 function AddProductForm({addProduct}) {
 
@@ -21,7 +21,7 @@ function AddProductForm({addProduct}) {
     };
 
     addProduct(newProduct);
-  };
+  };//creates a new product 
 
   return (
     <form onSubmit={formSubmit}>
@@ -41,6 +41,6 @@ function AddProductForm({addProduct}) {
       <button type="submit">Submit New Product</button>
     </form>
   );
-}
+} //creates the form for the product 
 
 export default AddProductForm;
