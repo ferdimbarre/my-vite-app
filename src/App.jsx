@@ -1,35 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ProductList from './assets/components/ProductList'
+import AddProductForm from './assets/components/AddProductForm';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState ([
+    {id: 1, name: "Laptop", price: 1200, description: "MacBook 2020"},
+    {id: 2, name: "Burguer", price: 9, description: "with fries included"}, 
+    {id: 3, name: "Coke", price: 3, description: "Diet Coke" },
+    ]); 
 
+// to create the prop i used i addprofuctform
+const addProduct = (newProduct) => {
+ setProducts((prevProducts) => [...prevProducts, newProduct]);
+  };
+
+//components will be returned inside the return
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <> 
+  <ProductList products = {products}/>
+  <AddProductForm addProduct={addProduct}/>
+  
+   </>
   )
 }
 
 export default App
+// create the app function here 
+
