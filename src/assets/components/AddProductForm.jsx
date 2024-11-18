@@ -25,7 +25,7 @@ function AddProductForm({addProduct}) {
 
   return (
     <form onSubmit={formSubmit}>
-      <h1>Add Product Form</h1>
+      <h2>Add Product Form</h2>
       <div>
         <label htmlFor="name">Product Name: </label>
         <input type="text" id="name" name="name" required />
