@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+
+
+function idGenerator (){
+    let time = Date.now();
+    const mathRand= Math.floor(Math.random()* 1000)
+    return `${time}${mathRand}`
+}
 
 function AddProductForm({addProduct}) {
 
@@ -8,7 +14,7 @@ function AddProductForm({addProduct}) {
 
     const formData = new FormData(e.target);
     const newProduct = {
-      id: uuidv4(), //generating an unique id that isnt based on math random or an array index
+      id: idGenerator(), //generating an unique id that isnt based on math random or an array index
       name: formData.get("name"),
       price: parseFloat(formData.get("price")),
       description: formData.get("description"),
