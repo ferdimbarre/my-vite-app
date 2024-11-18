@@ -8,7 +8,7 @@ import ProductItem from "./ProductItem";
 function ProductList({ products }) {
   return (
     <div>
-      <h1>Product List</h1>
+      <h1>PRODUCT LIST</h1>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
